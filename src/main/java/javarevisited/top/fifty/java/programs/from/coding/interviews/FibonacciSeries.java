@@ -23,13 +23,13 @@ public class FibonacciSeries {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		sc.close();
-		BigInteger result = fibonacciRecursion(n); // it takes more time if n >= 35
-		// BigInteger result = fibonacciNoRecursion(n);
+		// BigInteger result = fibonacciRecursion(n); // it takes more time if n >= 35
+		 BigInteger result = fibonacciNoRecursion(n);
 		System.out.println(result);
 	}
 
 	/*
-	 * using recursion to calculate factorial number is great, but it takes time
+	 * using recursion to calculate fibonacci number is great, but it takes time
 	 * when x getting bigger (try x = 40)
 	 */
 	public static BigInteger fibonacciRecursion(int x) {
