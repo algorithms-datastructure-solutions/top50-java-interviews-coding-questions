@@ -12,7 +12,7 @@ public class FirstnonRepeatedCharacter {
 		String s = in.nextLine();
 		in.close();
 
-		System.out.println("First non repeated character is " + firstNonRepeated(s));
+		System.out.println("First non repeated character is " + firstNonRepeatedCharacterInAString(s));
 	}
 
 	public static char firstNonRepeated(String s) {
@@ -28,5 +28,19 @@ public class FirstnonRepeatedCharacter {
 		}
 
 		return 0;
+	}
+	
+	public static char firstNonRepeatedCharacterInAString(String s) {
+		char[] characters = s.toCharArray();
+		int j;
+		for (int i = 0; i < characters.length; i++) {
+			for (j = 0; j < characters.length; j++) {
+				if (i != j && characters[i] == characters[j])
+					break;
+			}
+			if (j == characters.length)
+				return characters[i];
+		}
+		return '0';
 	}
 }
